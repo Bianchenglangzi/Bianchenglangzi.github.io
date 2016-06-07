@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Coding Fox <small>LeetCode</small></title>
+    <meta name="description" content="">
+    <meta name="author" content="Bianchenglangzi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="/theme/html5.js"></script>
+    <![endif]-->
+
+
+    <!-- Le styles -->
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link href="/theme/local.css" rel="stylesheet">
+    <link href="/theme/pygments.css" rel="stylesheet">
+    <link href="/theme/font-awesome.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<header class="blog-header">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span9">
+	<a href="" class="brand">Coding Fox</a>
+      </div>
+
+      <div class="span3" id="blog-nav">
+	<ul class="nav nav-pills pull-right">
+	    <li  class="active" >
+	      <a href="/category/leetcode.html ">LeetCode</a>
+	</ul>
+      </div>
+    </div> <!-- End of fluid row-->
+  </div>   <!-- End of Container-->
+</header>
+    
+<div class="container">
+    <div class="content">
+    <div class="row-fluid">
+
+        <div class="span10">
+        
+
+        
+
+    <div class='row-fluid''>
+        <div class="article-title span9">
+            <a href="/employees-earning-more-than-their-managers.html"><h1>Employees Earning More Than Their Managers</h1></a>
+        </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span2">
+<p>Tue 07 June 2016 </p>
+
+<p style="text-align: left;">
+Filed under <a href="/category/leetcode.html">LeetCode</a>
+</p>
+<p style="text-align: left;">
+ 
+    Tags <a href="/tag/database.html">Database</a> </p>
+<p>
+</p>
+      </div>
+      <div class="article-content span8">
+	<div class="section" id="problem-description">
+<h2>Problem Description</h2>
+<p>The Employee table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.</p>
+<table border="1" class="docutils">
+<caption>Employee Table</caption>
+<colgroup>
+<col width="13%" />
+<col width="23%" />
+<col width="27%" />
+<col width="37%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Id</td>
+<td>Name</td>
+<td>Salary</td>
+<td>ManagerId</td>
+</tr>
+<tr><td>1</td>
+<td>Joe</td>
+<td>70000</td>
+<td>3</td>
+</tr>
+<tr><td>2</td>
+<td>Henry</td>
+<td>80000</td>
+<td>4</td>
+</tr>
+<tr><td>3</td>
+<td>Sam</td>
+<td>60000</td>
+<td>NULL</td>
+</tr>
+<tr><td>4</td>
+<td>Max</td>
+<td>90000</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<p>Given the Employee table, write a SQL query that finds out employees who earn more than their managers. For the above table, Joe is the only employee who earns more than his manager.</p>
+<table border="1" class="docutils">
+<caption>Result</caption>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr><td>Employee</td>
+</tr>
+<tr><td>Joe</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="solution">
+<h2>Solution</h2>
+<pre class="code sql literal-block">
+<span class="k">select</span> <span class="n">a</span><span class="p">.</span><span class="n">Name</span> <span class="n">Employee</span>
+<span class="k">from</span> <span class="n">Employee</span> <span class="n">a</span><span class="p">,</span> <span class="n">Employee</span> <span class="n">b</span>
+<span class="k">where</span> <span class="n">a</span><span class="p">.</span><span class="n">ManagerId</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">Id</span>
+<span class="k">and</span> <span class="n">a</span><span class="p">.</span><span class="n">Salary</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">.</span><span class="n">Salary</span><span class="p">;</span>
+</pre>
+</div>
+ 
+	<a class="btn btn-mini xsmall" href="/employees-earning-more-than-their-managers.html">
+          <i class="icon-comment"></i> Comment </a>
+	<hr />
+      </div>
+      
+    </div>
+    
+<div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="/category/leetcode.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div>
+
+ 
+  
+        </div>
+        
+        
+    </div>     </div> </div>
+
+<!--footer-->
+<div class="container">
+  <div class="well" style="background-color: #E9EFF6">
+    <div id="blog-footer">
+      <div class="row-fluid">
+        <div class="links span2" align="center">
+          <ul class="nav nav-list">
+            <li class="nav-header"> 
+              Links
+            </li>
+            
+            <li><a href="http://getpelican.com/">Pelican</a></li>
+            <li><a href="http://python.org/">Python.org</a></li>
+            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+          </ul>
+        </div>
+	<div class="site-nav span2" align="center">
+          <ul class="nav nav-list" id="site-links">
+            <li class="nav-header"> 
+              Site
+            </li>
+            <li><a href=""><i class="icon-home" style="color: #1f334b">
+                </i>Home</a></li>
+            <li><a href="/archives.html"><i class="icon-list" style="color: #1f334b">
+                </i>Archives</a></li>
+	    <li><a href="/tags.html"><i class="icon-tags" style="color: #1f334b">
+                </i>Tags</a></li>
+	    
+	  </ul>
+
+        </div>
+
+      </div> <!--end of fluid row-->
+    </div> <!--end of blog-footer-->
+    <hr />
+    <p align="center"><a href="">Coding Fox</a>
+      &copy; Bianchenglangzi
+    Powered by <a href="https://github.com/getpelican/pelican">Pelican</a> and
+        <a href="https://twitter.github.com/bootstrap">Twitter Bootstrap</a>. 
+        Icons by <a href="https://fortawesome.github.com/Font-Awesome">Font Awesome</a> and 
+        <a href="https://gregoryloucas.github.com/Font-Awesome-More">Font Awesome More</a></p>
+
+  </div> <!--end of well -->
+</div> <!--end of container -->
+
+<!--/footer-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
